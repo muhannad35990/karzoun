@@ -13,6 +13,7 @@ import {
 import ListItem from "../atoms/ListItem"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
+import TabsContainer from "../molecules/TabsContainer"
 
 const features: { title: string; href: string; description: string }[] = [
   {
@@ -131,134 +132,150 @@ const library: { title: string; href: string; description: string }[] = [
     description: "توصيف"
   }
 ]
+const featuresTabs = [
+  { title: "مميزات شات كرزون الرئيسية", content: <div>tab0</div> },
+  { title: "إدارة العمليات والتنسيق", content: <div>tab1</div> }
+]
 export function Header() {
   return (
-    <div className="w-full flex items-center justify-between py-2 px-4 bg-blue-100 bg-opacity-70">
-      <div className="w-full flex items-center justify-between">
-        <button className="py-2 px-3 rounded-lg text-white font-semibold bg-primary  hover:animate-pulse grid place-items-center">
-          تسجيل الدخول
-        </button>
-        <NavigationMenu dir="rtl">
-          <NavigationMenuList>
-            <NavigationMenuItem>
-              <Link href="/" legacyBehavior passHref>
-                <NavigationMenuLink
-                  className={cn(
-                    navigationMenuTriggerStyle(),
-                    "font-semibold bg-blue-100 bg-opacity-70"
-                  )}
-                >
-                  الرئيسية
-                </NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
-            <NavigationMenuItem dir="rtl">
-              <NavigationMenuTrigger className="font-semibold bg-blue-100 bg-opacity-70">
-                مميزات المنصة
-              </NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                  {features.map((component) => (
-                    <ListItem
-                      key={component.title}
-                      title={component.title}
-                      href={component.href}
-                    >
-                      {component.description}
-                    </ListItem>
-                  ))}
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-
-            <NavigationMenuItem>
-              <NavigationMenuTrigger className="font-semibold bg-blue-100 bg-opacity-70">
-                مكتبة الشروحات
-              </NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="flex items-start w-[400px] gap-3 p-4 md:w-[800px] lg:w-[900px]">
-                  <li className="w-56 col-span-2">
-                    <NavigationMenuLink asChild>
-                      <a
-                        className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                        href="/"
-                      >
-                        {/* <Icons.logo className="h-6 w-6" /> */}
-                        <Image
-                          alt="karzoun logo"
-                          src="/images/karzoun-logo1.png"
-                          width={200}
-                          height={300}
-                        />
-                        <div className="mb-2 mt-4 font-medium">
-                          القائمة غير كافية؟ قم بزيارة مركز المساعدة للمزيد
-                        </div>
-                        <Link
-                          href="/"
-                          className="bg-primary rounded-xl px-3 py-2 text-white font-semibold bg-blue-100 bg-opacity-70 grid place-items-center"
-                        >
-                          زيارة مركز المساعدة
-                        </Link>
-                      </a>
-                    </NavigationMenuLink>
-                  </li>
-                  <div className="md:col-span-10">
-                    <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                      {library.map((component) => (
-                        <ListItem
-                          key={component.title}
-                          title={component.title}
-                          href={component.href}
-                        >
-                          {component.description}
-                        </ListItem>
-                      ))}
-                    </ul>
+    <div className="w-full py-2 px-4 bg-blue-100">
+      <div className="flex items-center justify-between w-4/5 mx-auto">
+        <div className="w-full flex items-center justify-between">
+          <button className="py-2 px-3 rounded-lg text-white font-semibold bg-primary  hover:animate-pulse grid place-items-center">
+            تسجيل الدخول
+          </button>
+          <NavigationMenu dir="rtl">
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <Link href="/" legacyBehavior passHref>
+                  <NavigationMenuLink
+                    className={cn(
+                      navigationMenuTriggerStyle(),
+                      "font-semibold bg-blue-100 bg-opacity-70"
+                    )}
+                  >
+                    الرئيسية
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem dir="rtl">
+                <NavigationMenuTrigger className="font-semibold bg-blue-100 bg-opacity-70">
+                  مميزات المنصة
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className="flex items-start w-[400px]  md:w-[800px] lg:w-[900px]">
+                    <TabsContainer tabs={featuresTabs} />
                   </div>
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
+                  {/* <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                    {features.map((component) => (
+                      <ListItem
+                        key={component.title}
+                        title={component.title}
+                        href={component.href}
+                      >
+                        {component.description}
+                      </ListItem>
+                    ))}
+                  </ul> */}
+                </NavigationMenuContent>
+              </NavigationMenuItem>
 
-            <NavigationMenuItem>
-              <NavigationMenuTrigger className="font-semibold bg-blue-100 bg-opacity-70">
-                خدماتنا
-              </NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                  {services.map((component) => (
-                    <ListItem
-                      key={component.title}
-                      title={component.title}
-                      href={component.href}
-                    >
-                      {component.description}
-                    </ListItem>
-                  ))}
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <Link href="/" legacyBehavior passHref>
-                <NavigationMenuLink
-                  className={cn(
-                    navigationMenuTriggerStyle(),
-                    "font-semibold bg-blue-100 bg-opacity-70"
-                  )}
-                >
-                  برنامج الشركاء
-                </NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
-          </NavigationMenuList>
-        </NavigationMenu>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="font-semibold bg-blue-100 bg-opacity-70">
+                  مكتبة الشروحات
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="flex items-start w-[400px] gap-3 p-4 md:w-[800px] lg:w-[900px]">
+                    <li className="w-56 col-span-2">
+                      <NavigationMenuLink asChild>
+                        <div className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md">
+                          <Image
+                            alt="karzoun logo"
+                            src="/images/karzoun-logo1.png"
+                            width={200}
+                            height={300}
+                          />
+                          <div className="mb-2 mt-4 font-medium">
+                            لم تحصل على أي مقالة بخصوص طلبك؟ أبشر
+                          </div>
+                          <Link
+                            href="/"
+                            className="rounded-xl px-3 py-2 text-white font-semibold bg-primary grid place-items-center"
+                          >
+                            تواصل مع الدعم
+                          </Link>
+                        </div>
+                      </NavigationMenuLink>
+                    </li>
+                    <div className="md:col-span-10">
+                      <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                        {library.map((component) => (
+                          <ListItem
+                            key={component.title}
+                            title={component.title}
+                            href={component.href}
+                          >
+                            {component.description}
+                          </ListItem>
+                        ))}
+                        <div>
+                          <div className="mb-2 mt-4 font-semibold">
+                            القائمة غير كافية؟ قم بزيارة مركز المساعدة للمزيد
+                          </div>
+                          <Link
+                            href="/"
+                            className="rounded-xl px-3 py-2 text-white font-semibold bg-primary grid place-items-center"
+                          >
+                            زيارة مركز المساعدة
+                          </Link>
+                        </div>
+                      </ul>
+                    </div>
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="font-semibold bg-blue-100 bg-opacity-70">
+                  خدماتنا
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                    {services.map((component) => (
+                      <ListItem
+                        key={component.title}
+                        title={component.title}
+                        href={component.href}
+                      >
+                        {component.description}
+                      </ListItem>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link href="/" legacyBehavior passHref>
+                  <NavigationMenuLink
+                    className={cn(
+                      navigationMenuTriggerStyle(),
+                      "font-semibold bg-blue-100 bg-opacity-70"
+                    )}
+                  >
+                    برنامج الشركاء
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+        </div>
+        <Image
+          alt="karzoun logo"
+          src="/images/karzoun-logo1.png"
+          width={50}
+          height={50}
+          className="ml-8"
+        />
       </div>
-      <Image
-        alt="karzoun logo"
-        src="/images/karzoun-logo1.png"
-        width={50}
-        height={50}
-        className="ml-8"
-      />
     </div>
   )
 }
