@@ -48,7 +48,7 @@ export function HomePartners() {
       </h1>
       <Carousel
         opts={{
-          align: "start",
+          align: "center",
           loop: true
         }}
         plugins={[
