@@ -12,7 +12,10 @@ function HomeKarzounChat() {
           <h1 className="text-3xl text-white font-bold text-end mb-2" dir="rtl">
             كرزون شات تتيح لفريقك أن يكون متعاون وأكثر إنتاجية وسرعة.
           </h1>
-          <p className="text-lg text-gray-100 font-semibold text-end" dir="rtl">
+          <p
+            className="text-lg text-gray-100 font-semibold text-right"
+            dir="rtl"
+          >
             ارأيت ؟… انت ونحن, موظفينك وعملائك …. الجميع سوف يكون سعيد إبدء معنا
             اليوم ثورة جديدة في تحسين خدمة العملاء لديك
           </p>
