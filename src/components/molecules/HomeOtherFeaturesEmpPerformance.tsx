@@ -27,7 +27,7 @@ function HomeOtherFeaturesEmpPerformance() {
           المحادثات من صفحة التقرير بعد النظر في درجة التقييم لمشاهدة تفاصيل
           المحادثة.
         </p>
-        <ul className="grid grid-cols-2">
+        <ul className="grid grid-cols-2 mt-2">
           <li className="font-semibold text-lg">
             - يتم جمع التقييمات تلقائياً
           </li>

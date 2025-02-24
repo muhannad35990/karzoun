@@ -8,6 +8,7 @@ import {
 } from "lucide-react"
 import TabsContainer from "../molecules/TabsContainer"
 import HomeOtherFeaturesEmpPerformance from "../molecules/HomeOtherFeaturesEmpPerformance"
+import HomeOtherFeaturesEmpBehave from "../molecules/HomeOtherFeaturesEmpbehave"
 
 function HomeOtherFeatures() {
   const featuresTabs = [
@@ -19,7 +20,7 @@ function HomeOtherFeatures() {
     {
       title: "استهداف حسب السلوك",
       icon: <UserRoundCog />,
-      content: <div>tab1</div>
+      content: <HomeOtherFeaturesEmpBehave />
     },
     {
       title: "لوحة تقارير شاملة",

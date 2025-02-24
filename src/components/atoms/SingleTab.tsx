@@ -13,7 +13,9 @@ const SingleTab: FC<SingleTabProps> = ({
       className={cn(
         `flex bg-gray-100 text-primary hover:bg-primary hover:text-white ease-in-out px-3 py-2 hover:cursor-pointer`,
         isSelected && "bg-primary text-white",
-        orientation === "vertical" ? "flex-row" : "flex-col items-center p-6"
+        orientation === "vertical"
+          ? "flex-row"
+          : "flex-col items-center p-6 text-center"
       )}
     >
       {icon}
