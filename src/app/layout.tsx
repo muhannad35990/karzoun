@@ -10,6 +10,7 @@ const geistSans = Geist({
 
 const Tajawalfont = Tajawal({
   variable: "--font-tajwal",
+  subsets: ["arabic"],
   weight: ["200", "300", "400", "500", "700", "800", "900"]
 })
 const geistMono = Geist_Mono({
