@@ -6,6 +6,7 @@ import HomeCustomerService from "@/components/organisms/HomeCustomerService"
 import HomeDataManage from "@/components/organisms/HomeDataManage"
 import HomeEmpCoordinate from "@/components/organisms/HomeEmpCoordinate"
 import HomeKarzounChat from "@/components/organisms/HomeKarzounChat"
+import HomeOtherFeatures from "@/components/organisms/HomeOtherFeatures"
 import { HomePartners } from "@/components/organisms/HomePartners"
 import HomeRobot from "@/components/organisms/HomeRobot"
 import HomeTeamManage from "@/components/organisms/HomeTeamManage"
@@ -26,6 +27,7 @@ export default function Home() {
       <HomeRobot />
       <HomeAiRoobot />
       <HomeAutomation />
+      <HomeOtherFeatures />
     </div>
   )
 }

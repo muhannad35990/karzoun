@@ -164,7 +164,7 @@ export function Header() {
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <div className="flex items-start w-[400px]  md:w-[800px] lg:w-[900px]">
-                    <TabsContainer tabs={featuresTabs} />
+                    <TabsContainer tabs={featuresTabs} orientation="vertical" />
                   </div>
                   {/* <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                     {features.map((component) => (
