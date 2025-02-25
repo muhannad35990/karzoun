@@ -24,7 +24,7 @@ const TabsContainer: FC<TabsContainerProps> = ({
         }`}
       >
         {tabs.map((tab: SingleTabType, index: number) => (
-          <div key={index} onMouseOver={() => setSelectedTab(index)}>
+          <div key={index} onClick={() => setSelectedTab(index)}>
             <SingleTab
               {...tab}
               isSelected={selectedTab === index}

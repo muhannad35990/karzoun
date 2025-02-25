@@ -9,6 +9,10 @@ import {
 import TabsContainer from "../molecules/TabsContainer"
 import HomeOtherFeaturesEmpPerformance from "../molecules/HomeOtherFeaturesEmpPerformance"
 import HomeOtherFeaturesEmpBehave from "../molecules/HomeOtherFeaturesEmpbehave"
+import HomeOtherFeaturesEmpReports from "../molecules/HomeOtherFeaturesEmpReports"
+import HomeOtherFeaturesEmpConversations from "../molecules/HomeOtherFeaturesEmpConversations"
+import HomeOtherFeaturesEmpAutomation from "../molecules/HomeOtherFeaturesEmpAutomation"
+import HomeOtherFeaturesEmpDatabase from "../molecules/HomeOtherFeaturesEmpDatabase"
 
 function HomeOtherFeatures() {
   const featuresTabs = [
@@ -25,22 +29,22 @@ function HomeOtherFeatures() {
     {
       title: "لوحة تقارير شاملة",
       icon: <LayoutDashboard />,
-      content: <div>tab2</div>
+      content: <HomeOtherFeaturesEmpReports />
     },
     {
       title: "تصفيات المحادثات",
       icon: <MessageSquareMore />,
-      content: <div>tab3</div>
+      content: <HomeOtherFeaturesEmpConversations />
     },
     {
       title: "اتمتة الاجراءات والمهام",
       icon: <CalendarCheck />,
-      content: <div>tab4</div>
+      content: <HomeOtherFeaturesEmpAutomation />
     },
     {
       title: "تضمين اكسل وبنك معلومات",
       icon: <Database />,
-      content: <div>tab5</div>
+      content: <HomeOtherFeaturesEmpDatabase />
     }
   ]
   return (

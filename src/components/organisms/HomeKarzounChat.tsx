@@ -2,9 +2,9 @@ import { Button } from "../ui/button"
 
 function HomeKarzounChat() {
   return (
-    <div className="bg-primary flex items-center w-full px-2 py-8">
+    <div className="bg-primary flex items-center shadow-xl w-full px-2 py-8">
       <div className="w-5/6 mx-auto flex items-center justify-between">
-        <Button className="bg-white text-primary text-lg px-8">
+        <Button className="bg-white text-primary text-lg px-8 py-6">
           {" "}
           اشترك الان
         </Button>
