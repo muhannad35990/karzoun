@@ -40,14 +40,8 @@ function Footer() {
       <div className="flex flex-col items-center mb-8 w-5/6 mx-auto mt-16">
         <div className="bg-primary flex items-center w-full px-2 py-8 -mt-48  shadow-lg rounded-t-2xl">
           <div className="w-5/6 mx-auto flex items-center justify-between">
-            <Button className="bg-white text-primary text-lg px-8 py-6">
-              اطلب مكالمة الان
-            </Button>
-            <div className="flex flex-col items-end">
-              <h1
-                className="text-3xl text-white font-bold text-end mb-2"
-                dir="rtl"
-              >
+            <div className="flex flex-col items-start">
+              <h1 className="text-3xl text-white font-bold text-right mb-2">
                 هل لديك ما تقوله لنا ؟
               </h1>
               <p
@@ -58,6 +52,9 @@ function Footer() {
                 اسفساراتك …؟!
               </p>
             </div>
+            <Button className="bg-white text-primary text-lg px-8 py-6">
+              اطلب مكالمة الان
+            </Button>
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 mt-16">
