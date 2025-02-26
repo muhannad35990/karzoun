@@ -21,7 +21,7 @@ const TabsContainer: FC<TabsContainerProps> = ({
       <div
         className={`flex  ${
           orientation === "vertical"
-            ? "flex-col w-[270px] h-full"
+            ? "flex-col w-[200px] h-full"
             : "flex-row w-full justify-between"
         }`}
       >
