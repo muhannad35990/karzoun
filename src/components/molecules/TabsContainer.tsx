@@ -12,14 +12,16 @@ const TabsContainer: FC<TabsContainerProps> = ({
   return (
     <div
       className={`flex ${
-        orientation === "vertical" ? "flex-row w-full" : "flex-col"
+        orientation === "vertical"
+          ? "flex-row w-full justify-between h-full"
+          : "flex-col"
       }`}
       dir="rtl"
     >
       <div
-        className={`flex ${
+        className={`flex  ${
           orientation === "vertical"
-            ? "flex-col w-56"
+            ? "flex-col w-[270px] h-full"
             : "flex-row w-full justify-between"
         }`}
       >
@@ -35,8 +37,10 @@ const TabsContainer: FC<TabsContainerProps> = ({
       </div>
       <div
         className={`${
-          orientation === "vertical" ? "-[calc(100%-224px)]" : "w-full"
-        }"w p-4"`}
+          orientation === "vertical"
+            ? "flex-1 max-w-[calc(100%-270px)]"
+            : "w-full"
+        }" p-4"`}
       >
         {tabs[selectedTab].content}
       </div>

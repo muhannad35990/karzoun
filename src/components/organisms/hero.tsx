@@ -6,7 +6,8 @@ function Hero() {
     <div className="w-full h-[600px]  bg-opacity-70 bg-blue-100">
       <div className="relative w-4/5 grid place-items-center mx-auto h-full">
         <div className="flex flex-col items-center">
-          <h1 className="text-primary font-extrabold text-[75px]">
+          <h3 className="text-lg mb-0">المنصة الأكثر شمولا في الوطن العربي</h3>
+          <h1 className="text-primary font-extrabold text-[75px] mt-0">
             اطلق العنان لقوة
           </h1>
           <h1 className="text-[#FBBD01] text-[46px] font-bold mt-0 p-2">

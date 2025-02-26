@@ -14,6 +14,8 @@ import ListItem from "../atoms/ListItem"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
 import TabsContainer from "../molecules/TabsContainer"
+import HeaderKarzounFeacturesTab from "../molecules/HeaderKarzounFeacturesTab"
+import HeaderKarzounCoordinationOp from "../molecules/HeaderKarzounCoordinationOp"
 
 const features: { title: string; href: string; description: string }[] = [
   {
@@ -133,8 +135,17 @@ const library: { title: string; href: string; description: string }[] = [
   }
 ]
 const featuresTabs = [
-  { title: "مميزات شات كرزون الرئيسية", content: <div>tab0</div> },
-  { title: "إدارة العمليات والتنسيق", content: <div>tab1</div> }
+  {
+    title: "مميزات شات كرزون الرئيسية",
+    content: <HeaderKarzounFeacturesTab />
+  },
+  {
+    title: "إدارة العمليات والتنسيق",
+    content: <HeaderKarzounCoordinationOp />
+  },
+  { title: "التحليلات والتقارير", content: <div>tab1</div> },
+  { title: "السرعة والانتاجية", content: <div>tab1</div> },
+  { title: "عمليات الربط المتاحة", content: <div>tab1</div> }
 ]
 export function Header() {
   return (
@@ -163,7 +174,7 @@ export function Header() {
                   مميزات المنصة
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="flex items-start w-[400px]  md:w-[800px] lg:w-[900px]">
+                  <div className="flex items-start w-[1200px]">
                     <TabsContainer tabs={featuresTabs} orientation="vertical" />
                   </div>
                   {/* <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">

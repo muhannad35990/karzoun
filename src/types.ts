@@ -31,3 +31,11 @@ export interface WhoWeAreCardProps {
   Icon?: any
   content: string
 }
+
+export interface HeaderLinkCardProps {
+  title: string
+  image?: string
+  Icon?: any
+  desc: string
+  link: string
+}

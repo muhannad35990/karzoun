@@ -77,22 +77,22 @@ function Footer() {
                 href="https://www.facebook.com/karzoun.tech/"
                 target="_blank"
               >
-                <Facebook size={40} />
+                <Facebook size={30} />
               </Link>
               <Link href="https://twitter.com/Karzoun_Tech" target="_blank">
-                <Twitter size={40} />
+                <Twitter size={30} />
               </Link>
               <Link
                 href="https://www.instagram.com/karzoun_marketing/"
                 target="_blank"
               >
-                <Instagram size={40} />
+                <Instagram size={30} />
               </Link>
               <Link
                 href="https://www.youtube.com/channel/UCtVqhxVYaTe5HaOFpBhOpTg"
                 target="_blank"
               >
-                <Youtube size={40} />
+                <Youtube size={30} />
               </Link>
             </div>
           </div>
