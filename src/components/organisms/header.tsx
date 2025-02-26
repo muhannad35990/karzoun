@@ -16,6 +16,7 @@ import { cn } from "@/lib/utils"
 import TabsContainer from "../molecules/TabsContainer"
 import HeaderKarzounFeacturesTab from "../molecules/HeaderKarzounFeacturesTab"
 import HeaderKarzounCoordinationOp from "../molecules/HeaderKarzounCoordinationOp"
+import HeaderKarzounEmpReports from "../molecules/HeaderKarzounEmpReports"
 
 const features: { title: string; href: string; description: string }[] = [
   {
@@ -143,7 +144,7 @@ const featuresTabs = [
     title: "إدارة العمليات والتنسيق",
     content: <HeaderKarzounCoordinationOp />
   },
-  { title: "التحليلات والتقارير", content: <div>tab1</div> },
+  { title: "التحليلات والتقارير", content: <HeaderKarzounEmpReports /> },
   { title: "السرعة والانتاجية", content: <div>tab1</div> },
   { title: "عمليات الربط المتاحة", content: <div>tab1</div> }
 ]
