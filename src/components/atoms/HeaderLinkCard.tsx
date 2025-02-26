@@ -23,8 +23,8 @@ const HeaderLinkCard: FC<HeaderLinkCardProps> = ({
               className="contain me-2 mt-2"
             />
           )}
-          {Icon && <Icon size={60} className="text-primary me-2 -mt-2" />}
-          <div className="">
+          {Icon && <Icon size={60} className="text-primary me-2 -mt-2 w-8" />}
+          <div className="flex-1">
             <h2 className="font-semibold text-lg">{title}</h2>
             <p className="text-gray-500">{desc}</p>
           </div>
